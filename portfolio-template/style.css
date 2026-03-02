@@ -1,0 +1,356 @@
+/* ============================================================
+   포트폴리오 스타일시트
+   ✏️ 색상을 바꾸고 싶으면 아래 :root 안의 값을 수정하세요
+   ============================================================ */
+
+:root {
+    --color-primary: #002060;       /* 포인트 색상 (네이비) */
+    --color-primary-light: #E5EDF8; /* 포인트 색상 연한 버전 */
+    --color-text: #333333;          /* 본문 텍스트 */
+    --color-text-light: #666666;    /* 부가 설명 텍스트 */
+    --color-bg: #FFFFFF;            /* 배경색 */
+    --color-bg-alt: #F8F9FA;        /* 교대 배경색 */
+    --color-border: #E0E0E0;        /* 테두리 */
+    --font-main: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+
+/* ── 기본 레이아웃 ── */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.7;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+}
+
+
+/* ── 헤더 ── */
+
+header {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: 60px 24px 20px;
+    margin-bottom: 40px;
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    font-size: 1.2em;
+    opacity: 0.85;
+    margin-bottom: 24px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+nav {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.95em;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+nav a:hover {
+    color: white;
+    border-bottom-color: white;
+}
+
+
+/* ── 섹션 공통 ── */
+
+section {
+    margin-bottom: 48px;
+}
+
+section h2 {
+    font-size: 1.5em;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+section p {
+    margin-bottom: 12px;
+}
+
+
+/* ── 소개 섹션 ── */
+
+#about p {
+    font-size: 1.05em;
+    line-height: 1.85;
+}
+
+
+/* ── 경험 타임라인 ── */
+
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid var(--color-primary-light);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 24px 20px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.timeline-date {
+    font-size: 0.85em;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.timeline-content h3 {
+    font-size: 1.1em;
+    margin-bottom: 4px;
+}
+
+.timeline-content p {
+    color: var(--color-text-light);
+    font-size: 0.95em;
+    margin-bottom: 0;
+}
+
+
+/* ── 프로젝트 카드 ── */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.project-card:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-tag {
+    display: inline-block;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.project-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    font-size: 0.9em;
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+
+/* ── 기술 ── */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h3 {
+    font-size: 1em;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-tag {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-size: 0.85em;
+    color: var(--color-text);
+}
+
+
+/* ── 블로그 ── */
+
+.blog-placeholder {
+    background: var(--color-bg-alt);
+    border: 1px dashed var(--color-border);
+    border-radius: 8px;
+    padding: 32px;
+    text-align: center;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+.blog-post {
+    border-bottom: 1px solid var(--color-border);
+    padding: 20px 0;
+}
+
+.blog-post h3 {
+    font-size: 1.1em;
+    margin-bottom: 4px;
+}
+
+.blog-post time {
+    font-size: 0.85em;
+    color: var(--color-text-light);
+}
+
+
+/* ── 연락처 ── */
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 12px 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.contact-item:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.contact-icon {
+    font-size: 1.3em;
+}
+
+
+/* ── 푸터 ── */
+
+footer {
+    text-align: center;
+    padding: 32px 24px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-light);
+    font-size: 0.85em;
+}
+
+footer p {
+    margin-bottom: 4px;
+}
+
+
+/* ── 반응형 (모바일) ── */
+
+@media (max-width: 600px) {
+    header {
+        padding: 40px 16px 16px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 0.85em;
+    }
+
+    main {
+        padding: 0 16px 40px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+}

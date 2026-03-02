@@ -24,5 +24,11 @@
 |--------|--------|------|
 | 모두의 한국어 텍스트 분석 | 길벗 | 박조은, 송영숙 |
 
+## 수업 자료
+
+| 폴더 | 내용 |
+|------|------|
+| [portfolio-template](portfolio-template/) | 포트폴리오 템플릿 — GitHub Pages로 자기소개 페이지 만들기 |
+
 ## License
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
